@@ -95,7 +95,7 @@ export class UserdataComponent implements OnInit {
   SignOut() {
     this.auth.logout;
     setTimeout(() => {
-      window.location.href = "http://localhost:4200/login";
+      window.location.href = "https://escleapp.vercel.app/login";
       }, 500)
   }
 
@@ -112,7 +112,7 @@ export class UserdataComponent implements OnInit {
       });
     })
     setTimeout(() => {
-      window.location.href = "http://localhost:4200/userdata";
+      window.location.href = "https://escleapp.vercel.app/userdata";
       }, 300)
   }
 
@@ -137,7 +137,7 @@ export class UserdataComponent implements OnInit {
       }
     );
     setTimeout(() => {
-      window.location.href = "http://localhost:4200/userdata";
+      window.location.href = "https://escleapp.vercel.app/userdata";
       }, 300)
   }
 
