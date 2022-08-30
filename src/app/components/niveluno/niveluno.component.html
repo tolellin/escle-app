@@ -1,0 +1,16 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+  <label style="font-size: 28px;"><b>Nivel 1</b></label>
+</div>
+<body>
+  <div class="container" >
+  <li *ngFor="let e of ejercicios">
+    <div class="card">
+      <img src="{{e.imagen}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{e.nombre}}</h5>
+          <p class="card-text">{{e.descripcion}}</p>
+      </div>
+    </div>
+  </li>
+</div>
+</body>

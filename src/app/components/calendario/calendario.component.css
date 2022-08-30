@@ -1,0 +1,15 @@
+html, body {
+  height: 91vh;
+  width: 100%;
+}
+
+.fc .fc-toolbar .fc-button {
+  color: #ffffff;
+  background: #ffffff;
+  border: 1px solid #007ad9;
+  font-size: 1rem;
+  transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+}

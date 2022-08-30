@@ -1,0 +1,10 @@
+html, body {
+  height: 91vh;
+  width: 100%;
+  overflow-y: inherit;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

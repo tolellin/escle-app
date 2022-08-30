@@ -1,0 +1,28 @@
+<div style="text-align: center; margin-top: 20px;">
+  <label style="font-size: 28px;"><b>Consejos</b></label>
+</div>
+<body>
+  <div class="container" >
+  <li *ngFor="let h of help">
+    <div class="card" (click)="cambiarDescripcion(h.title, h.description)"
+    onclick="window.modal.showModal();"  >
+      <img src="{{h.image}}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">{{h.title}}</h5>
+      </div>
+    </div>
+
+  </li>
+
+  <dialog id="modal">
+    <div class="div-new">
+      <img class="img-back" src="/assets/arrow-small-left-free-icon-font.png" onclick="window.modal.close();">
+      <label class="lbl-back" style="float:left; font-size: large"><b>{{titulo}}</b></label>
+    </div>
+    <div class="overflow-auto" >
+      <label style="float:left;">{{descripcion}}</label>
+    </div>
+  </dialog>
+</div>
+</body>
+

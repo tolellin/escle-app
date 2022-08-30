@@ -1,0 +1,29 @@
+<div style="margin: 20px;">
+    <img class="nav-bar image" src="/assets/logotipo-escleapp.png">
+  </div>
+  <div style="text-align: center;">
+    <label style="font-size: 28px;"><b>Iniciar Sesion</b></label>
+  </div>
+<div class="container">
+  <div class="card text-center">
+    <div class="card-body">
+      <div style="display: table-cell; vertical-align:middle; padding-left: 20px;">
+        <label style="float:left;"><b>Email</b></label>
+        <br>
+        <input type="text" class="input-field"  value="" [(ngModel)] = "usuario.email"/>
+      </div>
+      <br>
+      <div style="display: table-cell; vertical-align:middle; padding-left: 20px;">
+        <label style="float:left;"><b>Contraseña</b></label>
+        <br>
+        <input type="password" class="input-field" value="" [(ngModel)] = "usuario.password"/>
+      </div>
+      <div>
+        <button style="margin-bottom: 10px ; margin-top: 20px;" class="button-62" (click)="Login()">Ingresar</button>
+        <br>
+        <button class="button-google" (click)="LoginGoogle()">Ingresar con Google</button>
+      </div>
+      <label style="font-size: 16px;">¿Aun no tienes cuenta? <a href="signin" class="link">Registrarse</a></label>
+    </div>
+  </div>
+</div>

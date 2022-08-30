@@ -1,0 +1,71 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+  <label style="font-size: 28px;"><b>Añadir elementos</b></label>
+</div>
+<div style="text-align: left; margin-top: 20px; margin-bottom: 5px; margin-left: 20px;">
+  <label style="font-size: 22px;"><b>Citas</b></label>
+</div>
+<div class="card text-center">
+  <div class="card-body p-4">
+    <button class="button-62" onclick="window.modal.showModal();" >Nueva cita</button>
+  </div>
+</div>
+<div style="text-align: left; margin-top: 20px; margin-bottom: 5px; margin-left: 20px;">
+  <label style="font-size: 22px;"><b>Medicación</b></label>
+</div>
+<div class="card text-center">
+  <div class="card-body p-4">
+    <button class="button-62" onclick="window.modal2.showModal();" >Añadir medicación</button>
+  </div>
+</div>
+<div style="text-align: left; margin-top: 20px; margin-bottom: 5px; margin-left: 20px;">
+  <label style="font-size: 22px;"><b>Documentos</b></label>
+</div>
+<div class="card text-center">
+  <div class="card-body p-4">
+    <label for="file-upload" class="button-62">
+      <b>Subir documento</b>
+    </label>
+    <input id="file-upload" type="file"  accept=".png, jpg, .jpeg" />
+  </div>
+</div>
+
+    <dialog id="modal">
+      <div class="div-new">
+        <img class="img-back" src="/assets/arrow-small-left-free-icon-font.png" onclick="window.modal.close();">
+        <label class="lbl-back" style="float:left; font-size: large"><b>Nueva cita</b></label>
+      </div>
+      <div class="overflow-auto" >
+        <label style="float:left;">Nombre de la cita</label>
+        <br>
+        <input class="input-field" type="nombre" [(ngModel)] = "nombre">
+        <br>
+        <br>
+        <label style="float:left;">Descripcion</label>
+        <br>
+        <input class="input-field" type="nombre" [(ngModel)] = "descripcion">
+        <br>
+        <br>
+        <label style="float:left;">Fecha</label>
+        <br>
+        <input type="date" class="input-field" style="text-align: center; padding-left: 0px;" [(ngModel)] = "date">
+        <br>
+        <div style="padding: 20px; text-align: center;">
+          <button class="button-62" (click)="nuevaCita()" onclick="window.modal.close();">Guardar</button>
+        </div>
+      </div>
+    </dialog>
+    <dialog id="modal2">
+      <div class="div-new">
+        <img class="img-back" src="/assets/arrow-small-left-free-icon-font.png" onclick="window.modal2.close();">
+        <label class="lbl-back" style="float:left; font-size: large"><b>Añadir medicación</b></label>
+      </div>
+      <div class="overflow-auto" >
+        <select name = Sexo class="input-field" [(ngModel)] = "medicacion">
+          <option *ngFor="let m of medicamentos" [ngValue]="m">{{m.nombre}}</option>
+        </select>
+        <br>
+        <div style="padding: 20px; text-align: center;">
+          <button class="button-62" (click)="anyadirMedicacion()" onclick="window.modal2.close();">Guardar</button>
+        </div>
+      </div>
+    </dialog>

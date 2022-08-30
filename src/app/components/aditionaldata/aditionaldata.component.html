@@ -1,0 +1,122 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px;">
+  <label style="font-size: 28px;"><b>Datos adicionales</b></label>
+</div>
+<body>
+  <div class="container">
+  <div class="card text-center">
+    <div class="card-body p-4">
+      <div style="display: table-cell; vertical-align:middle; padding-left: 20px;">
+      <label style="float:left;"><b>Nombre</b></label>
+      <br>
+      <input class="input-field" type="nombre" placeholder="Ingrese su nombre" [(ngModel)] = "usuario.nombre">
+      <br>
+    </div>
+    <br>
+    <div style="display: table-cell; vertical-align:middle; padding-left: 20px;">
+    <label style="float:left;"><b>Apellidos</b></label>
+      <br>
+      <input class="input-field" type="apellido" placeholder="Ingrese su apellido" [(ngModel)] = "usuario.apellido">
+      <br>
+    </div>
+      <br>
+      <div style="display: table-cell; vertical-align:middle; padding-left: 20px;">
+      <label style="float:left;"><b>Edad</b></label>
+      <br>
+      <input class="input-field" type="edad" placeholder="Ingrese su edad" [(ngModel)] = "usuario.edad">
+      <br>
+      </div>
+      <br>
+      <div style="display: table-cell; vertical-align:middle; padding-left: 20px;">
+
+      </div>
+      <label style="float:left; padding-left: 20px;"><b>Sexo</b></label>
+      <br>
+      <div >
+        <select name = Sexo class="input-field2" [(ngModel)] = "usuario.sexo">
+        <option value="Hombre">Hombre</option>
+        <option value="Mujer">Mujer</option>
+        <option value="Otro">Otro</option>
+      </select>
+      </div>
+      <br>
+      <br>
+      <div>
+        <label style="float:left; padding-left: 20px;"><b>Tipo de EM</b></label>
+        <img class="img-check" src="/assets/interrogation-free-icon-font.png" onclick="window.modal.showModal();">
+      </div>
+
+      <br>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" checked>
+        <label class="form-check-label"  for="radio1" >
+          EMRR
+        </label>
+
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+        <label class="form-check-label" for="radio2">
+          EMPS
+        </label>
+
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">
+        <label class="form-check-label" for="radio3">
+          EMPP
+        </label>
+
+      </div>
+      <div class="form-check">
+        <input type="radio" class="form-check-input" id="radio4" name="optradio" value="option4">
+        <label class="form-check-label" for="radio4">
+          EMPR
+        </label>
+
+      </div>
+      <br>
+      <label for="file-upload" class="button-80">
+        <b>Imagen de perfil</b>
+      </label>
+      <input id="file-upload" type="file"  accept=".png, jpg, .jpeg" (change)="cargarImagen($event) "/>
+      <br>
+      <br>
+      <img src={{usuario.imagen}} />
+      <br>
+      <br>
+      <a class="button-62" href="userdata" (click)="updateData()">Finalizar</a>
+      <br>
+
+      <dialog id="modal">
+        <div class="div-new">
+          <img class="img-back" src="/assets/arrow-small-left-free-icon-font.png" onclick="window.modal.close();">
+          <label class="lbl-back" style="float:left; font-size: large"><b><i>Tipos de Esclerosis Múltiple</i></b></label>
+        </div>
+        <div class="overflow-auto" >
+
+          <br>
+          <label style="float:left; font-size: large;"><b>Esclerosis Múltiple remitente recurrente (EMRR)</b></label>
+          <label style="float:left; font-size: medium">Un 85% de personas con Esclerosis Múltiple tienen EMRR. Los brotes son imprevisibles y pueden aparecer síntomas en cualquier momento -nuevos o ya conocidos- que duran algunos días o semanas y luego desaparecen totalmente o dejando alguna secuela. Entre las recidivas no parece haber progresión de la EM.</label>
+          <br>
+          <br>
+          <label style="float:left; font-size: large"><b>Esclerosis Múltiple secundaria progresiva (EMPS)</b></label>
+          <label style="float:left; font-size: medium">Muchas de las personas con EMRR (cerca de un 50-70 %) desarrollarán EMSP, en la que su discapacidad empeora con el paso del tiempo. Se caracteriza por una progresión continua con o sin recidivas ocasionales, remisiones poco importantes y fases de estabilidad.</label>
+          <br>
+          <br>
+          <label style="float:left; font-size: large"><b>Esclerosis Múltiple primaria progresiva  (EMPP)</b></label>
+          <label style="float:left; font-size: medium">Entre el 10 y el 15% de las personas se les diagnostica EMPP. No experimentan recaídas, pero su discapacidad sigue empeorando gradualmente con el paso del tiempo.</label>
+          <br>
+          <br>
+          <label style="float:left; font-size: large"><b>Esclerosis Múltiple progresiva recidivante (EMPR)</b></label>
+          <label style="float:left; font-size: medium">Es una forma atípica, en la que hay progresión desde el comienzo, pero a diferencia de los pacientes con EMPP, éstos muestran brotes agudos claros, con o sin recuperación completa. Los periodos entre brotes se caracterizan por una progresión contínua.</label>
+        </div>
+      </dialog>
+
+    </div>
+  </div>
+</div>
+</body>
+
+
+
+

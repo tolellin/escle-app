@@ -1,0 +1,77 @@
+<div class="card-body" style="display: flex;">
+  <div style="text-align: center; margin-top: 20px; margin-bottom: 20px; flex: 4;" >
+    <label style="font-size: 28px; padding-left: 25%;"><b>Datos personales</b></label>
+  </div>
+  <div style="text-align: center; margin-top: 20px; margin-bottom: 20px; flex: 1;">
+
+    <a  href="updatedata">
+      <img class="img-edit" src="/assets/edit-free-icon-font.png">
+    </a>
+  </div>
+</div>
+
+<div class="container" style="position: relative">
+  <div class="card text-center">
+    <div class="card-body p-4">
+      <img src={{usuario.imagen}} />
+      <br>
+      <br>
+      <label class="float:left" type="nombre" >{{usuario.nombre}}&nbsp;{{usuario.apellido}}</label>
+      <br>
+      <label class="float:left" type="email" >{{usuario.email}}</label>
+      <br>
+      <label class="float:left" type="edad" >Edad:&nbsp;{{usuario.edad}}</label>
+      <br>
+      <label class="float:left" type="sexo" >Sexo:&nbsp;{{usuario.sexo}}</label>
+      <br>
+    </div>
+  </div>
+  <div style="padding: 10px;"></div>
+
+  <div class="card text-left">
+    <div class="card-body p-4">
+      <label class="float:left" type="documentos" >Medicación:</label>
+      <li *ngFor="let m of umedicin" >
+        <div class="card">
+          <div class="card-body" style="display: flex;">
+            <div style=" flex: 5;">
+              <h5 class="card-title">{{m.nombre}}</h5>
+            <p class="card-text">{{m.composicion}}</p>
+            </div>
+            <div style="flex: 0.5; display: flex; align-items: center;">
+              <a class="button-62"  style="padding: 0 1.4rem" (click)="eliminarMedicina(m)">x</a>
+            </div>
+
+          </div>
+        </div>
+      </li>
+    </div>
+  </div>
+
+  <div style="padding: 10px;"></div>
+
+  <div class="card text-left">
+    <div class="card-body p-4">
+      <label class="float:left" type="documentos" >Documentos:</label>
+      <li *ngFor="let m of documentos" >
+        <div class="card">
+          <div class="card-body" style="display: flex;">
+            <div style=" flex: 5;">
+              <h5 class="card-title">{{m.nombre}}</h5>
+            <p class="card-text">{{m.composicion}}</p>
+            </div>
+            <div style="flex: 0.5; display: flex; align-items: center;">
+              <a class="button-62"  style="padding: 0 1.4rem" (click)="eliminarDocumento(m.id)">x</a>
+            </div>
+
+          </div>
+        </div>
+      </li>
+    </div>
+  </div>
+
+  <div style="padding: 20px; display: flex; justify-content: center;">
+    <button class="button-80" (click)="SignOut()">Cerrar Sesion</button>
+  </div>
+</div>
+
