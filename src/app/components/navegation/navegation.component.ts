@@ -14,7 +14,7 @@ export class NavegationComponent implements OnInit {
 
   ngOnInit(): void {
     this.url = window.location.href;
-    if (this.url == "http://localhost:4200/login" || this.url == "http://localhost:4200/signin" || this.url == "http://localhost:4200/aditionaldata" ) {
+    if (this.url == "https://escleapp.vercel.app/login" || this.url == "https://escleapp.vercel.app/signin" || this.url == "https://escleapp.vercel.app/aditionaldata" ) {
       this.mostrar = false;
     } else {
       this.mostrar = true;
