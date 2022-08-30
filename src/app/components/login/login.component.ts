@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       console.log("se logeo " + res);
 
       setTimeout(() => {
-        window.location.href = "http://localhost:4200/userdata";
+        window.location.href = "https://escleapp.vercel.app/userdata";
         }, 1000)
     })
 
