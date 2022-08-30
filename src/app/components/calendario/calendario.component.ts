@@ -100,7 +100,7 @@ export class CalendarioComponent implements OnInit {
       });
     })
     setTimeout(() => {
-      window.location.href = "http://localhost:4200/calendar";
+      window.location.href = "https://escleapp.vercel.app/calendar";
       }, 300)
   }
 }
