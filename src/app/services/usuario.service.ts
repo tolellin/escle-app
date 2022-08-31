@@ -14,7 +14,7 @@ const httpOptions = {
 })
 export class UsuarioService {
 
-API_URI = 'http://localhost:3000';
+API_URI = 'postgres://tgpvtqbwbejieg:d6e2dac148e8a97ddbbeb4c91c1d7517337ad3c1a9c53419092f10a3e85e91cd@ec2-176-34-215-248.eu-west-1.compute.amazonaws.com:5432/dbcv1k8n42ae59';
 
   constructor(private http: HttpClient) {}
 
