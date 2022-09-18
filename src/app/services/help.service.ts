@@ -8,7 +8,7 @@ import { Help } from '../models/Modelo'
 })
 export class HelpService {
 
-API_URI = 'http://localhost:3000';
+API_URI = 'https://escleapp.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
