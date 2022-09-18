@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 })
 export class MedicamentoService {
 
-API_URI = 'http://localhost:3000';
+API_URI = 'https://escleapp.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
