@@ -7,7 +7,7 @@ import { Evento } from '../models/Modelo';
 })
 export class EventService {
 
-  API_URI = 'http://localhost:3000';
+  API_URI = 'https://escleapp.herokuapp.com';
 
   constructor(private http: HttpClient) {}
 
